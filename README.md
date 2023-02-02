@@ -35,14 +35,13 @@ See [instructions](https://github.com/mpolski/gcp-costs-notify/blob/main/docs/ru
 #### Deploy to GCP
 Enable Google Cloud Functions API in your project:
 
-```gcloud services enable cloudfunctions.googleapis.com```
+```
+gcloud services enable cloudfunctions.googleapis.com
+```
 
-Prepare `.env.yaml` file with environment variables for the project your BigQuery dataset is in, the BigQuery dataset details (both from step 1) as weel as your Google Chat Space webhook link (created in step 2 above):
+Fill in the `./query/.env.yaml` file with your values of the project your BigQuery dataset is in, the BigQuery dataset details (both from step 1) as weel as your Google Chat Space webhook link (created in step 2 above):
 
 ```
-cd gcp-costs-notify
-
-cat <<EOF >> ./query/.env.file
 PROJECT_ID: <project_name_where_BQ_dataset_lives>
 DATASET: <dataset name>
 BQ_TABLE_NAME: <table name>
@@ -71,11 +70,15 @@ When asked about allowing unauthenticated invocations, answer `No`.
 
 #### Verify the function has been deployed
 
-```gcloud functions list```
+```
+gcloud functions list
+```
 
 Call the function to test it
 
-```gcloud functions call $FUNCTION --region=$REGION```
+```
+gcloud functions call $FUNCTION --region=$REGION
+```
 
 At this point a message should appear in you Google Chat Space similar to the image below:
 

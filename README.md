@@ -133,4 +133,5 @@ gcloud iam service-accounts delete $SA_EMAIL --quiet
 gcloud functions delete $FUNCTION --region=$REGION --quiet
 ```
 
-
+### License
+Released under the [Apache license](https://github.com/mpolski/gcp-costs-notify/blob/main/LICENSE.md). It is distributed as-is, without warranties or conditions of any kind.

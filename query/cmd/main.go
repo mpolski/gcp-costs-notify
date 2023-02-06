@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"os"
-	_ "query-to-chat-cf/query"
+	_ "query/query"
 
 	"github.com/GoogleCloudPlatform/functions-framework-go/funcframework"
 )

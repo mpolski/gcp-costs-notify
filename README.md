@@ -21,10 +21,14 @@ To register the incoming webhook:
 - Click SAVE.
 - Click content_copy Copy to copy the full webhook URL to use it in the following step
 
-#### 3. Clone the repo
+#### 3. Development environment
+You need a [Go](https://go.dev/doc/install) development environment or use [Cloud Shell](https://cloud.google.com/shell/docs/launching-cloud-shell).
+
+#### 4. Clone the repo
 ```
 git clone https://github.com/mpolski/gcp-costs-notify.git
 ```
+
 
 ## Deploying the function
 
